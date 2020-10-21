@@ -27,9 +27,3 @@ Rule: The two players use circle ('o') and cross ('x') signs respectively. They 
   e. Program codes in multiple files
     i. We will use multiple files to realize multiple functions like 'generate chessboard', 'judge state of the game', 'strategy of AI player', 'judge legality', etc.
 
-
-
-
-Timeline
-Intensively work one day
-Due: Noc 21
