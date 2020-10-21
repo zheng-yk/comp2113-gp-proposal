@@ -23,4 +23,4 @@ Rule: The two players use circle ('o') and cross ('x') signs respectively. They 
   d. File input/output (e.g., for loading/saving game status)  
      i. If legal coordinates are inputted or recalled, we refresh and display the updated chessboard by adding the coordinates into the class containing current board information.  
   e. Program codes in multiple files  
-     i. We will use multiple files to realize multiple functions like 'generate chessboard', 'judge state of the game', 'strategy of AI player', 'judge legality', etc.  
+     i. We will use multiple files to realize multiple functions like 'generate chessboard', 'judge state of the game', 'strategy of AI player', 'judge legality', etc.   
