@@ -2,7 +2,7 @@
 #readme.md  
 
 1. Team Members    
-Zheng Yike, UID:  3035637541   
+Zheng Yike, UID: 3035637541   
 Liu Yiming, UID: 3035637539    
 
 
@@ -13,15 +13,15 @@ Rule: The two players use circle ('o') and cross ('x') signs respectively. They 
 
 3. Features   
   a. Generation of random game sets or events    
-    i. We will use random functions to determine the play order of the two players.  
-    ii. The algorithms for AI player will contain random functions based on calculated optimal choices.  
+     i. We will use random functions to determine the play order of the two players.  
+     ii. The algorithms for AI player will contain random functions based on calculated optimal choices.  
   b. Data structures for storing game status  
-    i. We will use class to store the information of each sign on the board containing the position of row, column and type.  
-    ii. We will use class to store the information of the board, including the length and width of the board and the position of the last piece.  
+     i. We will use class to store the information of each sign on the board containing the position of row, column and type.  
+     ii. We will use class to store the information of the board, including the length and width of the board and the position of the last piece.  
   c. Dynamic memory management  
-    i. By the function of recalling some steps, we will realize dynamic memory management.  
+     i. By the function of recalling some steps, we will realize dynamic memory management.  
   d. File input/output (e.g., for loading/saving game status)  
-    i. If legal coordinates are inputted or recalled, we refresh and display the updated chessboard by adding the coordinates into the class containing current board information.  
+     i. If legal coordinates are inputted or recalled, we refresh and display the updated chessboard by adding the coordinates into the class containing current board information.  
   e. Program codes in multiple files  
-    i. We will use multiple files to realize multiple functions like 'generate chessboard', 'judge state of the game', 'strategy of AI player', 'judge legality', etc.  
+     i. We will use multiple files to realize multiple functions like 'generate chessboard', 'judge state of the game', 'strategy of AI player', 'judge legality', etc.  
 
