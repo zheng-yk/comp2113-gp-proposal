@@ -1,9 +1,9 @@
 # comp2113-gp-proposal
-1. Team Members  
-Zheng Yike, UID:  3035637541
-Liu Yiming, UID: 3035637539  
+1. Team Members    
+Zheng Yike, UID:  3035637541  
+Liu Yiming, UID: 3035637539    
 2. Game description  
-Name: Gomoku  
+Name: Gomoku   
 Description: Gomoku is a board game with 2 players. It is usually played with Go pieces (black and white chess) on a 15×15 Go board.  
 Rule: The two players use circle ('o') and cross ('x') signs respectively. They place one sign each turn by typing the coordinates of cells alternatively. For each round, the player could choose to place a sign, recall some steps (trace back to the previous state of the board), or skip his turn. The order of the two players is determined by the computer randomly. The first player uses circle signs and the second player uses cross signs. Every sign should be placed at one empty cell of the board. Anyone who first forms a row of 5 same signs will be the winner and the game is terminated.   
 3. Features 
