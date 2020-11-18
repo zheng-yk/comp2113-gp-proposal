@@ -4,6 +4,7 @@
 #include <time.h>
 using namespace std;
 
+//choose man-AI or man-man mode
 void Game::chooseMode()
 {
 	//choose mode
@@ -16,6 +17,7 @@ void Game::chooseMode()
 	} while (2 <= mode || mode < 0);
 }
 
+//randomly dicide who would play first
 void Game::initOrder()
 {
 	//initialize
@@ -31,6 +33,7 @@ void Game::initOrder()
     first = rdm;//if rdm=1, you play first
 }
 
+//set plaers' names
 void Game::initOrderAName()
 {
 
@@ -62,12 +65,14 @@ void Game::initOrderAName()
 	}
 }
 
+//initialization of the game
 void Game::initGame()
 {
 	chooseMode();//choose mode
 	initOrderAName();//choose order and name
 }
 
+//start the game 
 void Game::startGame()
 {
 	if (mode) //man-man mode
@@ -100,6 +105,7 @@ void Game::startGame()
 	}
 }
 
+//players move in term, with judgement being executed after every movement
 void Game::playchess(Player &black, Player &white, Judge &judge, ChessBoard &chesspad, Show &resultdisplay) {
 	int result;
 	int state[15][15] = { 0 };
