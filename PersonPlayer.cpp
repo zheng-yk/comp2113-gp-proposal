@@ -5,11 +5,14 @@
 #include "PersonPlayer.h"
 using namespace std;
 
+//relate color and name
 PersonPlayer::PersonPlayer(int color, string name)
 {
 	this->color = color;
 	this->name = name;
 }
+
+//display the personplayer's movement; output: personplayer's pieces' status 
 Chess PersonPlayer::giveNextChess(const int chessboard_state[15][15])
 {
 	int x, y;
