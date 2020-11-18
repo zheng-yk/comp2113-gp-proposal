@@ -14,14 +14,13 @@ void Game::chooseMode()
 	} while (2 <= mode || mode < 0);
 }
 
+//randomly assign the first player
 void Game::initOrder()
 {
-	//initialize
-	do {//choose order
-		resultdisplay.display("Type 1 to play first, type 0 otherwise£º");
-		cin.clear();
-		cin.sync();
-		cin >> first;
+	do {//randomly pick a number between 0 and 1
+		int rdm=rand()%2;
+    		//assign the first player play
+   		first = rdm;
 	} while (2 <= first || first < 0);
 }
 void Game::initOrderAName()
