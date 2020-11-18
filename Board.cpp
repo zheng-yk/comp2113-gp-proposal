@@ -6,6 +6,7 @@
 #include "Chess.h"
 using namespace std;
 
+//update the chessboard after a movement has been given
 void ChessBoard::addChess(Chess chess)
 {
 
@@ -21,6 +22,7 @@ void ChessBoard::addChess(Chess chess)
 
 }
 
+//print the current chessboard
 void ChessBoard::getChessBoardState(int chessboard_state[ROWNUM][COLUMN])
 {
 	for (int i = 0;i < ROWNUM;i++)
