@@ -19,7 +19,7 @@ void Game::initOrder()
 {
 	do {//randomly pick a number between 0 and 1
 		int rdm=rand()%2;
-    		//assign the first player play
+    		//assign the first player
    		first = rdm;
 	} while (2 <= first || first < 0);
 }
