@@ -1,9 +1,10 @@
 #include "AI.h"
 #include <vector>
 using namespace std;
-Position AI::getPosition(const int chessboard_state[15][15], int color) {
-    //calculate the position of the next piece
 
+//calculate and return the position of the next piece of AI
+Position AI::getPosition(const int chessboard_state[15][15], int color) {
+    
     int mychesspadcolor = color + 1;//sign of chessboard
     int hischesspadcolor;
 
@@ -66,6 +67,7 @@ Position AI::getPosition(const int chessboard_state[15][15], int color) {
 
 }
 
+//annalyse all the possible situations based on the current chessboard; return the updated value of the possible situatons
 int AI::judgeChessSituation(const int state[15][15], Position position, int color) {
 
     Situation situation = { 0 };//record the situation viarable
@@ -119,6 +121,7 @@ int AI::judgeChessSituation(const int state[15][15], Position position, int colo
     return giveScore(situation);//return scores according to situation
 }
 
+//analyze all the possible situations, return what type this situation belongs to
 int AI::giveScore(Situation situation) {
 
     int die4 = situation.die4 + situation.lowdie4;
@@ -167,6 +170,7 @@ int AI::giveScore(Situation situation) {
     return LevelFourteen;//no threat
 }
 
+//categorize the type of current situation
 int AI::getType(const int state[15][15], Position position, int color, int direction) {
     //0->5 in a row; 1->alive4 2->die4 3->alive3
     //4->die3 5->tiao3 6->alive2 7->die2 8->nothreat 9->lowdie4
@@ -179,6 +183,7 @@ int AI::getType(const int state[15][15], Position position, int color, int direc
     return type;
 }
 
+//obtain the pieces allocation case by case
 void AI::getChess(int chess[9], const int state[15][15], Position position, int color, int direction) {
     int hiscolor;
     if (color == BLACKFLAG)
@@ -279,12 +284,13 @@ void AI::getChess(int chess[9], const int state[15][15], Position position, int 
     }
 }
 
+//return the type and threat based on the chess allocation, based on how the central pieces arrange
 int AI::judgeType(const int chess[9]) {
     int mycolor = chess[4];
     int hiscolor;
 
     int left, right;//the initial position relating to the centre
-    int colorleft, colorright;//the initial color£¬(NOTHING or hiscolor)
+    int colorleft, colorright;//the initial colorÂ£Â¬(NOTHING or hiscolor)
     int count = 1;//initial number of central line
 
     if (mycolor == BLACKFLAG)
@@ -492,6 +498,7 @@ int AI::judgeType(const int chess[9]) {
     return NOTHREAT;//others: no threat
 }
 
+//compare the maxscore, i.e. the best moving strategy, return the suggested position for the next piece
 Position AI::maxScore(const int myscore[15][15], const int hisscore[15][15]) {
     Position position = {0, 0};
 
