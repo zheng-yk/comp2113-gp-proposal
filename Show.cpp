@@ -32,19 +32,19 @@ void Show::display(const int chessboard_state[15][15], string msg)
             switch(chessboard_state[h][l])
             {
                 case 0: // blank space
-                    cout << blank<<"  ";
+                    cout << blank<<"   ";
                     break;
                 case 1://black chess
-                    cout << black<<"  ";
+                    cout << black<<"   ";
                     break;
                 case 2://white chess
-                    cout << white<<"  ";
+                    cout << white<<"   ";
                     break;
                 case 3://the last black chess
-                    cout << black_last<<"  ";
+                    cout << black_last<<"   ";
                     break;
                 case 4://the last white chess
-                    cout << white_last<<"  ";
+                    cout << white_last<<"   ";
                     break;
             }
         }
