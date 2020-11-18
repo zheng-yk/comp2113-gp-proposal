@@ -3,12 +3,14 @@
 #include "Show.h"
 using namespace std;
 
+//display the initial chessboard
 void Show::display(string msg)
 {
 	int initstate[15][15] = { 0 };
 	display(initstate, msg);
 }
 
+//display the updated chessboard; input msg; output: the updated chessboard
 void Show::display(const int chessboard_state[15][15], string msg)
 {
 	system("cls");//clear screen
@@ -19,7 +21,7 @@ void Show::display(const int chessboard_state[15][15], string msg)
         cout << "   " << j;
     }
     cout << endl;
-    //print the chessboard out. represent every cell as "·"
+    //print the chessboard out. represent every cell as "Â·"
     for (int h=0;h<14;h++)
     {
         char j;
