@@ -8,71 +8,70 @@ using namespace std;
 #pragma once
 struct Position
 {
-	int x;//0µ½14£¬ĞĞ
-	int y;//0µ½14£¬ÁĞ
+	int x;//row
+	int y;//column
 };
 struct Situation
-{//µ±Ç°Î»ÖÃµÄĞÎÊ½£¬´ò·Ö¸ù¾İÕâ¸öÀ´´ò
-	int win5;//5Á¬Öé
-	int alive4;//»î4
-	int die4;//ËÀ4
-	int lowdie4;//ËÀ4µÍ¼¶°æ±¾
-	int alive3;//»î3
-	int tiao3;//Ìø3
-	int die3;//ËÀ3
-	int alive2;//»î2
-	int lowalive2;//µÍ¼¶»î2
-	int die2;//ËÀ2
-	int nothreat;//Ã»ÓĞÍşĞ²
+{//score
+	int win5;
+	int alive4;
+	int die4;=
+	int lowdie4;
+	int alive3;
+	int tiao3;
+	int die3;
+	int alive2;
+	int lowalive2;
+	int die2;
+	int nothreat;
 };
 
 class AI
 {
 private:
-	//ÆåÅÌ×´Ì¬±êÖ¾
+	//æ£‹ç›˜çŠ¶æ€æ ‡å¿—
 	static const int WHITEFLAG = 2;
 	static const int BLACKFLAG = 1;
 	static const int NOTHINGFLAG = 0;
 
-	//Æå¾ÖÀàĞÍ
-	static const int WIN5 = 0;//0->5Á¬Öé
-	static const int ALIVE4 = 1;//1->»î4
-	static const int DIE4 = 2;//2->ËÀ4
-	static const int LOWDIE4 = 3;//3->ËÀ4µÄµÍ¼¶°æ±¾
-	static const int ALIVE3 = 4;//3->»î3
-	static const int TIAO3 = 5;//5->Ìø3
-	static const int DIE3 = 6;//6->ËÀ3
-	static const int ALIVE2 = 7;//7->»î2
-	static const int LOWALIVE2 = 8;//8->µÍ¼¶»î2
-	static const int DIE2 = 9;//9->ËÀ2
-	static const int NOTHREAT = 10;//10->Ã»ÓĞÍşĞ²
+	//æ£‹å±€ç±»å‹
+	static const int WIN5 = 0;//0->5 in a row
+	static const int ALIVE4 = 1;//1->allive4
+	static const int DIE4 = 2;//2->die4
+	static const int LOWDIE4 = 3;//3->lowdie4
+	static const int ALIVE3 = 4;//3->alive3
+	static const int TIAO3 = 5;//5->tiao3
+	static const int DIE3 = 6;//6->die3
+	static const int ALIVE2 = 7;//7->alive2
+	static const int LOWALIVE2 = 8;//8->lowalive2
+	static const int DIE2 = 9;//9->die2
+	static const int NOTHREAT = 10;//10->no threat
 
-	//´ò·ÖµÈ¼¶
-	static const int LevelOne = 100000;//³ÉÎå
-	static const int Leveltwo = 10000;//³É»î4 »ò Ë«ËÀ4 »ò ËÀ4»î3
-	static const int Levelthree = 5000;//Ë«»î3
-	static const int Levelfour = 1000;//ËÀ3¸ß¼¶»î3
-	static const int Levelfive = 500;//ËÀËÄ
-	static const int Levelsix = 400;//µÍ¼¶ËÀËÄ
-	static const int Levelseven = 100;//µ¥»î3
-	static const int LevelEight = 90;//Ìø»î3
-	static const int LevelNight = 50;//Ë«»î2
-	static const int LevelTen = 10;//»î2
-	static const int LevelEleven = 9;//µÍ¼¶»î2
-	static const int LevelTwelve = 5;//ËÀ3
-	static const int LevelThirteen = 2;//ËÀ2
-	static const int LevelFourteen = 1;//Ã»ÓĞÍşĞ²
-	static const int LevelFiveteen = 0;//²»ÄÜÏÂ
+	//æ‰“åˆ†ç­‰çº§
+	static const int LevelOne = 100000;//win5
+	static const int Leveltwo = 10000;//alive4 or die4 or die4alive3
+	static const int Levelthree = 5000;//double-alive3
+	static const int Levelfour = 1000;//die&high-alive3
+	static const int Levelfive = 500;//die4
+	static const int Levelsix = 400;//lowdieå››
+	static const int Levelseven = 100;//single-live3
+	static const int LevelEight = 90;//tiao3
+	static const int LevelNight = 50;//double-live2
+	static const int LevelTen = 10;//alive2
+	static const int LevelEleven = 9;//lowdie2
+	static const int LevelTwelve = 5;//die3
+	static const int LevelThirteen = 2;//die2
+	static const int LevelFourteen = 1;//no threat
+	static const int LevelFiveteen = 0;//no place to move
 
-	int judgeType(const int chess[9]);//ÅĞ¶Ïµ±Ç°·½ÏòÆå¾ÖÀàĞÍ
-	void getChess(int chess[9], const int state[15][15], Position position, int color, int direction);//»ñµÃµ±Ç°·½ÏòÆå¾ÖÊı×échess
-	int getType(const int state[15][15], Position position, int color, int direction);//»ñµÃµ±Ç°·½ÏòÆå¾ÖÀàĞÍ
-	int judgeChessSituation(const int state[15][15], Position position, int color);//×ÛºÏ4¸ö·½ÏòÆÀÅĞµ±Ç°Î»ÖÃÆå¾ÖĞÎÊÆµÄ·ÖÊı
-	int giveScore(Situation situation);//¸ù¾İĞÎÊÆ£¬¸ø·Ö
-	Position maxScore(const int myscore[15][15], const int hisscore[15][15]);//¸ù¾İÎÒµÄ·ÖÊıºÍ¶ÔÊÖµÄ·ÖÊı£¬Ñ¡È¡×î´óÀûÒæµÄÎ»ÖÃ
+	int judgeType(const int chess[9]);//judge the current situation
+	void getChess(int chess[9], const int state[15][15], Position position, int color, int direction);//get the current chess array
+	int getType(const int state[15][15], Position position, int color, int direction);
+	int judgeChessSituation(const int state[15][15], Position position, int color);//judge the current score combining 4 directions
+	Position maxScore(const int myscore[15][15], const int hisscore[15][15]);//choose the most beneficial position
 
 public:
-	Position getPosition(const int chesspadstate[15][15], int color);//¸ù¾İµ±Ç°ĞÎÊÆ£¬¼ÆËãÏÂ²½ÆåµÄÎ»ÖÃ
+	Position getPosition(const int chesspadstate[15][15], int color);
 
 };
 
