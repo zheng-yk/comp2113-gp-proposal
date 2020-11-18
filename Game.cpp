@@ -1,6 +1,7 @@
 #include "Game.h"
 #include <iostream>
 #include <stdlib.h>
+#include <time.h>
 using namespace std;
 
 void Game::chooseMode()
@@ -15,15 +16,21 @@ void Game::chooseMode()
 	} while (2 <= mode || mode < 0);
 }
 
-//randomly assign the first player
 void Game::initOrder()
 {
-	do {//randomly pick a number between 0 and 1
-		int rdm=rand()%2;
-    		//assign the first player
-   		first = rdm;
-	} while (2 <= first || first < 0);//if rdm=1, you play first
+	//initialize
+	//randomly assign the first player
+    resultdisplay.display("The order is random. Press any key to start: ");
+    char start;
+    cin.clear();
+    cin.sync();
+    cin>>start;
+    srand(time(0));
+    int rdm=rand()%2;
+    //assign the first player
+    first = rdm;//if rdm=1, you play first
 }
+
 void Game::initOrderAName()
 {
 
