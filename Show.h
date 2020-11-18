@@ -5,32 +5,26 @@
 #include <string>
 #include <iostream>
 #include <cstdlib>
+using namespace std;
 class Show{
 private:
-	std::string rowAcolumn;
-	std::string chesspadsymbol;
+	string blank;
+	string black;
+	string white;
+	string black_last;
+	string white_last;
 
 public:
-	Show() {
-		rowAcolumn = "   A B C D E F G H I J K L M N O";
-		chesspadsymbol =	"┌┬┬┬┬┬┬┬┬┬┬┬┬┬┐"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"├┼┼┼┼┼┼┼┼┼┼┼┼┼┤"
-							"└┴┴┴┴┴┴┴┴┴┴┴┴┴┘";
+	Show()
+	{
+		blank = "·";
+		black = "○";
+		white = "●";
+		black_last = "▽";
+		white_last = "▼";
 	}
-	void display(const int chesspadstate[15][15], std::string msg);//刷新显示函数
-	void display(std::string msg);//还没开始下棋，提示信息输出
+	void display(const int chesspadstate[15][15], std::string msg);//clear board and display
+	void display(std::string msg);//initial display
 
 };
 

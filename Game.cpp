@@ -7,9 +7,7 @@ void Game::chooseMode()
 	//choose mode
 	do
     {
-		resultdisplay.display("Type 0: Alone? Try man-machine mode - Can you win the AI?\n");
-		resultdisplay.display("Type 1: Have a partner? Try man-man mode - An icecream for the winner!\n");
-		resultdisplay.display("Please choose: ");
+		resultdisplay.display("Type 0: Alone? Try man-machine mode - Can you win the AI?\nType 1: Have a partner? Try man-man mode - An icecream for the winner!\nPlease choose: ");
 		cin.clear();
 		cin.sync();
 		cin >> mode;
@@ -117,23 +115,30 @@ void Game::playchess(Player &black, Player &white, Judge &judge, ChessBoard &che
 	switch (result)
 	{
 	case 1:
-		resultdisplay.display(state, "Black: " + black.getName() + "Winning!\nPress\"e\"to quit");
+		resultdisplay.display(state, "Black: " + black.getName() + " Winning!\nPress\"e\"to quit: ");
 		break;
 	case 2:
-		resultdisplay.display(state, "White: " + white.getName() + "Winning!\nPress\"e\"to quit");
+		resultdisplay.display(state, "White: " + white.getName() + " Winning!\nPress\"e\"to quit: ");
 		break;
 	case 3:
-		resultdisplay.display(state, "Tie!\nPress\"e\"to quit");
+		resultdisplay.display(state, "Tie!\nPress\"e\"to quit: ");
 		break;
 	default:
 		break;
 	}
 	//quit
 	char exit;
-	do
+	while(true)
 	{
 		cin.clear();
 		cin.sync();
 		cin >> exit;
-	} while (exit != 'e' && exit != 'E');
+		if (exit != 'e' && exit != 'E')
+            cout << "Illegal input. Please press\"e\"to quit: " ;
+        else
+        {
+            cout << "End of this program"<<endl;
+            break;
+        }
+	}
 }

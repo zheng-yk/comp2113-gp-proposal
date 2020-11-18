@@ -9,7 +9,7 @@ Chess AIplayer::giveNextChess(const int chesspadstate[15][15])
 {
 	Position position;
 
-	position = computerai.getPosition(chesspadstate, color);//计算位置
+	position = computerai.getPosition(chesspadstate, color);//calculate position
 
-	return Chess(color, position.x, position.y);//返回棋子对象
+	return Chess(color, position.x, position.y);//return position
 }
