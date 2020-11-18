@@ -7,7 +7,7 @@ AIplayer::AIplayer(int color, std::string name)
 	this->name = name;
 }
 
-//return the piece's feature of AI, output: color, position
+//return the piece's feature of AI, return value: color, position
 Chess AIplayer::giveNextChess(const int chesspadstate[15][15])
 {
 	Position position;
