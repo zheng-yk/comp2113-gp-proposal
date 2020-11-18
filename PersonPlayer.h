@@ -2,13 +2,13 @@
 #define PERSONPLAYER_H_INCLUDED
 #include <string>
 
-#include "../Player.h"
-#include "../Chess.h"
+#include "Player.h"
+#include "Chess.h"
 using namespace std;
-class PeoplePlayer :public Player
+class PersonPlayer :public Player
 {
 public:
-	PeoplePlayer(int color, string name);
+	PersonPlayer(int color, string name);
 	Chess giveNextChess(const int chessboard_state[15][15]);
 };
 

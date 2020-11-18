@@ -3,7 +3,7 @@
 using namespace std;
 Position AI::getPosition(const int chessboard_state[15][15], int color) {
     //calculate the position of the next piece
-    
+
     int mychesspadcolor = color + 1;//sign of chessboard
     int hischesspadcolor;
 
@@ -284,7 +284,7 @@ int AI::judgeType(const int chess[9]) {
     int hiscolor;
 
     int left, right;//the initial position relating to the centre
-    int colorleft, colorright;//the initial colorï¼Œ(NOTHING or hiscolor)
+    int colorleft, colorright;//the initial color£¬(NOTHING or hiscolor)
     int count = 1;//initial number of central line
 
     if (mycolor == BLACKFLAG)
@@ -568,4 +568,3 @@ Position AI::maxScore(const int myscore[15][15], const int hisscore[15][15]) {
     }
 
 }
-

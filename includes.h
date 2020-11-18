@@ -19,13 +19,13 @@ char white_chess[3];
 #include "Chess.h"
 #include "Board.h"
 #include "Game.h"
-#include "AI/AI.h"
-#include "AIplayer/AIplayer.h"
-#include "Initialize/Initialize.h"
-#include "Judge/Judge.h"
-#include "PersonPlayer/PersonPlayer.h"
+#include "AI.h"
+#include "AIplayer.h"
+#include "Initialize.h"
+#include "Judge.h"
+#include "PersonPlayer.h"
 #include "Player.h"
-#include "Show/Show.h"
+#include "Show.h"
 
 
 

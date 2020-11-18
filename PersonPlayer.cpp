@@ -1,16 +1,16 @@
 #include <iostream>
 #include <iomanip>
 
-#include "../Variables.h"
+#include "Variables.h"
 #include "PersonPlayer.h"
 using namespace std;
 
-PeoplePlayer::PeoplePlayer(int color, string name)
+PersonPlayer::PersonPlayer(int color, string name)
 {
 	this->color = color;
 	this->name = name;
 }
-Chess PeoplePlayer::giveNextChess(const int chessboard_state[15][15])
+Chess PersonPlayer::giveNextChess(const int chessboard_state[15][15])
 {
 	int x, y;
 	char a, b;
