@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 
-#include "Variables.h"
+
 #include "Judge.h"
 using namespace std;
 

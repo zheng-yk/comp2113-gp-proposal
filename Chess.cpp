@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 
-#include "Variables.h"
+
 #include "Chess.h"
 using namespace std;
 

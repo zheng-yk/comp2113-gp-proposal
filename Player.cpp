@@ -2,7 +2,7 @@
 #include <iomanip>
 #include <string>
 
-#include "Variables.h"
+
 #include "Player.h"
 #include "Chess.h"
 using namespace std;

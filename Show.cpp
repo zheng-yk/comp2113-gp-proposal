@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 
-#include "Variables.h"
 #include "Show.h"
 using namespace std;
 

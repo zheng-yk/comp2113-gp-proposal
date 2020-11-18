@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 
-#include "Variables.h"
+
 #include "PersonPlayer.h"
 using namespace std;
 
