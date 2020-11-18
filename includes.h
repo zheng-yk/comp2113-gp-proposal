@@ -16,16 +16,15 @@ char white_chess[3];
 
 //////////////////include files
 
-
+#include "Chess.h"
+#include "Board.h"
+#include "Game.h"
 #include "AI/AI.h"
 #include "AIplayer/AIplayer.h"
-#include "Board/Board.h"
-#include "Chess/Chess.h"
-#include "Game/Game.h"
 #include "Initialize/Initialize.h"
 #include "Judge/Judge.h"
 #include "PersonPlayer/PersonPlayer.h"
-#include "Player/Player.h"
+#include "Player.h"
 #include "Show/Show.h"
 
 

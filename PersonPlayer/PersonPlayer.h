@@ -1,6 +1,15 @@
 #ifndef PERSONPLAYER_H_INCLUDED
 #define PERSONPLAYER_H_INCLUDED
+#include <string>
 
-#include "PersonPlayer.cpp"
+#include "../Player.h"
+#include "../Chess.h"
+using namespace std;
+class PeoplePlayer :public Player
+{
+public:
+	PeoplePlayer(int color, string name);
+	Chess giveNextChess(const int chessboard_state[15][15]);
+};
 
 #endif // PERSONPLAYER_H_INCLUDED
