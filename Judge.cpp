@@ -5,6 +5,7 @@
 #include "Judge.h"
 using namespace std;
 
+//judge if there is a winning situation (5 in a row), output: result or continue
 int Judge::judgeResult(const int chessboard_state[15][15])
 {
 	int lastrow, lastcolumn;
