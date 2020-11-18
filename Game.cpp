@@ -22,7 +22,7 @@ void Game::initOrder()
 		int rdm=rand()%2;
     		//assign the first player
    		first = rdm;
-	} while (2 <= first || first < 0);
+	} while (2 <= first || first < 0);//if rdm=1, you play first
 }
 void Game::initOrderAName()
 {
