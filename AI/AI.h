@@ -15,7 +15,7 @@ struct Situation
 {//score
 	int win5;
 	int alive4;
-	int die4;=
+	int die4;
 	int lowdie4;
 	int alive3;
 	int tiao3;
