@@ -17,11 +17,11 @@ private:
 public:
 	Show()
 	{
-		blank = "¡¤";
-		black = "¡ð";
-		white = "¡ñ";
-		black_last = "¨Œ";
-		white_last = "¨‹";
+		blank = "~";
+		black = "*";
+		white = "o";
+		black_last = "-";
+		white_last = "+";
 	}
 	void display(const int chesspadstate[15][15], std::string msg);//clear board and display
 	void display(std::string msg);//initial display
