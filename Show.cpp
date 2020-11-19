@@ -21,7 +21,7 @@ void Show::display(const int chessboard_state[15][15], string msg)
         cout << "   " << j;
     }
     cout << endl;
-    //print the chessboard out. represent every cell as "·"
+    //print the chessboard out. represent every cell as "~"
     for (int h=0;h<14;h++)
     {
         char j;
